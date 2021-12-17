@@ -1,0 +1,32 @@
+@use 'src/styles/vars';
+
+.title{
+  text-align: center;
+  margin: (vars.$gutter * 2) auto;
+  position: relative;
+  width: fit-content;
+  padding: 0 vars.$gutter;
+
+  h2{
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 1;
+    position: relative;
+  }
+}
+
+@media (min-width: vars.$breakpoint-laptop) {
+  .title{
+    &::after{
+      content: '';
+      height: 65%;
+      width: calc(100% + 20px);
+      background-color: vars.$primary-color;
+      position: absolute;
+      top: 50%;
+      left: -10px;
+      right: -10px;
+    }
+  }
+}

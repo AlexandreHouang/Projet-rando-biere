@@ -1,0 +1,32 @@
+@use 'src/styles/vars';
+
+.signOut {
+  button {
+    display: none;
+  }
+}
+
+// For screens larger than 480px
+@media (min-width: vars.$breakpoint-mobile) {
+  .signOut {
+    button {
+      display: block;
+      background-color: vars.$cancel-color;
+      color: white;
+      font-weight: bold;
+      font-size: 1em;
+      border: none;
+      padding: 15px;
+      border-radius: 5px;
+      margin-right: 20px;
+
+      &:hover {
+        background-color: vars.$cancel-hover-color;
+      }
+    }
+    // Hide the logout button if have className "signOutHide"
+    &.signOutHide{
+      display: none;
+    }
+  }
+}

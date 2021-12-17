@@ -1,0 +1,15 @@
+@use 'src/styles/vars';
+
+.legalNotice{
+  padding: vars.$gutter;
+
+  h3{
+    margin: (vars.$gutter * 2) 0 vars.$gutter 0;
+    font-weight: bold;
+    font-size: vars.$title3-font;
+  }
+  p{
+    margin: (vars.$gutter / 2) 0;
+    font-size: vars.$mini-font;
+  }
+}

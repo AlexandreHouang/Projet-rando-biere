@@ -1,0 +1,6 @@
+%syntax-version=1.0.0
+%project=rando-biere
+
+init 2021-05-04T12:53:25Z Etudiant O'clock <student@teleporter> # tables creation
+
+views/brewery-hikescount 2021-05-05T09:57:25Z Tao <tao.jacqueline858@gmail.com> # view of brewery with an hikes count

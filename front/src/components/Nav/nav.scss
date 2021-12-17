@@ -1,0 +1,50 @@
+@use 'src/styles/vars';
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+
+  .logo {
+    width: 160px;
+  }
+}
+
+.banner {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    height: vars.$height-nav;
+  }
+}
+
+.menu {
+  margin-right: 10px;
+  display: contents;
+
+  .menu_icon {
+    width: 40px;
+  }
+}
+
+.z-index {
+  z-index:2;
+}
+
+// For screens larger than 480px
+@media (min-width: vars.$breakpoint-mobile) {
+  .nav {
+    .logo {
+      width: 220px;
+    }
+  }
+
+  .menu {
+    display: none;
+  }
+}

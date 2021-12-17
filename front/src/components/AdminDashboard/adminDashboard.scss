@@ -1,0 +1,18 @@
+@use 'src/styles/vars';
+
+.adminDashboard {
+  h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px auto 10px 10px;
+  }
+}
+
+// For screens larger than 480px
+@media (min-width: vars.$breakpoint-mobile) {
+  .adminDashboard {
+    h1 {
+      font-size: 40px;
+    }
+  }
+}

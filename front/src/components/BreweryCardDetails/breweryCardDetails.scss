@@ -1,0 +1,24 @@
+@use 'src/styles/vars';
+
+.breweryCardDetails{
+  display: flex;
+  padding: vars.$gutter;
+  flex-wrap: wrap;
+
+  .breweryCardDetails__carousel,
+  .breweryCardDetails__infos{
+    width: 100%;
+  }
+}
+
+@media (min-width: vars.$breakpoint-tablet) {
+  .breweryCardDetails{
+
+    .breweryCardDetails__carousel{
+      width: 40%;
+    }
+    .breweryCardDetails__infos{
+      width: 60%;
+    }
+  }
+}

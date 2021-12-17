@@ -1,0 +1,14 @@
+BIÈRE: _nom, description, image, degré alcool, type
+PROMOUVOIR, 0N BRASSERIE, 11 BIÈRE
+PHOTO_RANDONNEE: _URL photo, légende, texte alternatif
+ILLUSTRER, 0N RANDONNÉE, 11 PHOTO_RANDONNEE
+
+REPRÉSENTER, 0N BRASSERIE, 11 PHOTO_BRASSERIE
+BRASSERIE: _nom, image principale, description, région, slug, adresse, email, numéro de téléphone
+ASSOCIER, 0N BRASSERIE, 11 RANDONNÉE
+RANDONNÉE: _nom, image principale, description, URL GPX, difficulté, URL map, temps, kilomètres, altitude max, altitude min
+
+PHOTO_BRASSERIE: _URL photo, légende, texte alternatif
+AJOUTER, 0N UTILISATEUR, 01 BRASSERIE
+UTILISATEUR: _pseudo, email, mot de passe, rôle
+:

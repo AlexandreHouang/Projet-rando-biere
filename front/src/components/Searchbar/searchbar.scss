@@ -1,0 +1,72 @@
+@use 'src/styles/vars';
+
+.searchbar {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  color: #222;
+
+  .searchbar__description{
+    color: vars.$light-color;
+  }
+  .MuiList-root{
+    max-width: 100%;
+    z-index: 1;
+    margin-top: vars.$gutter / 2;
+
+    .MuiListItem-root{
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  }
+  .searchbar__form {
+    background-color: #fff;
+    border-radius: 100px;
+    padding: vars.$gutter / 2;
+
+    .MuiInput-underline:before,
+    .MuiInput-underline:hover:not(.Mui-disabled):before,
+    .MuiInput-underline::after {
+      border-bottom: 0px solid #fff;
+    }
+
+    .MuiFormLabel-root.Mui-focused{
+      color: #222;
+    }
+
+    label+.MuiInput-formControl{
+      margin-top: 0;
+    }
+
+    .MuiInputLabel-formControl{
+      font-size: 18px;
+      top: -15px;
+      left: 10px;
+    }
+    .MuiInputLabel-shrink{
+      top: -8px;
+    }
+  }
+  .MuiCollapse-container{
+    max-height: 35vh;
+    overflow-x: scroll;
+  }
+}
+
+// For laptop
+@media (min-width: vars.$breakpoint-tablet) {
+  .searchbar {
+    width: 50%;
+
+    .MuiCollapse-container{
+      max-height: 100%;
+      overflow-x: auto;
+    }
+  }
+}
+
+@media (min-width: vars.$breakpoint-laptop) {
+  .searchbar {
+    width: 35%;
+  }
+}

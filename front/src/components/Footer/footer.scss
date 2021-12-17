@@ -1,0 +1,46 @@
+@use 'src/styles/vars';
+
+.footer {
+  background-color: vars.$dark-color;
+  color: vars.$light-color;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: vars.$gutter;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: vars.$height-footer * 1.5;
+
+  .footer__content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+
+    .footer__content__link {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+// For tablet and laptop
+@media (min-width: vars.$breakpoint-mobile) {
+  .footer {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: vars.$height-footer;
+
+    .footer__content {
+      padding: vars.$gutter 0;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      .footer__content__link {
+        margin-left: vars.$gutter * 2;
+      }
+    }
+  }
+}

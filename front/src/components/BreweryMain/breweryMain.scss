@@ -1,0 +1,10 @@
+@use 'src/styles/vars';
+
+.breweryMain{
+  display: flex;  
+  flex-wrap: wrap;
+
+  .breweryMain__noResults{
+    margin: 0 (vars.$gutter *2);
+  }
+}

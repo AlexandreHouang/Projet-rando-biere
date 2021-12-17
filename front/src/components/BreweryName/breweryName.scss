@@ -1,0 +1,21 @@
+@use 'src/styles/vars';
+
+.breweryName{
+
+  .breweryName__name{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: vars.$title1-font;
+    margin: vars.$gutter;
+  }
+  .breweryName__adress{
+    display: flex;
+    align-items: center;
+    margin: 0 vars.$gutter;
+
+    .icon{
+      width: vars.$width-icon;
+      margin-right: vars.$gutter / 2;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@use 'reset';
+@use 'vars';
+
+body {
+  font-family: sans-serif;
+  font-size: vars.$normal-font;
+  color: vars.$dark-color;
+}
+
+// Using the Rustico font (downloaded file)
+@font-face {
+  font-family: 'Rustico';
+  src: url('../assets/fonts/Rustico-Regular.otf');
+}
+
+// Loader
+.loader {
+  text-align: center;
+  margin: vars.$gutter * 2;
+
+  .MuiCircularProgress-colorPrimary{
+    color: vars.$primary-color;
+    width: 70px !important;
+    height: 70px !important;
+  }
+}

@@ -1,0 +1,29 @@
+@use 'src/styles/vars';
+
+.alert-dialog__confirm.MuiButton-root{
+  background-color: vars.$confirm-color;
+
+  &:hover{
+    background-color: vars.$confirm-hover-color;
+  }
+
+  span{
+    color: vars.$light-color;
+  }
+}
+
+.alert-dialog__cancel.MuiButton-root{
+  background: none;
+
+  &:hover{
+    background: none;
+  }
+  span{
+    color: vars.$cancel-color;
+
+    &:hover{
+      color: vars.$cancel-hover-color;
+    }
+  }
+  
+}

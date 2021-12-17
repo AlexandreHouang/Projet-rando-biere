@@ -1,0 +1,11 @@
+@use 'src/styles/vars';
+
+.hikingCards{
+  padding: (vars.$gutter * 2) vars.$gutter;
+  background-color: vars.$background-color;
+
+  .hikingCards__content{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

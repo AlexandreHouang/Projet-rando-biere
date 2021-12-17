@@ -1,0 +1,14 @@
+@use 'src/styles/vars';
+
+.randoBiere {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: vars.$height-footer * 1.5;
+}
+
+// For tablet and laptop
+@media (min-width: vars.$breakpoint-mobile) {
+  .randoBiere {
+    padding-bottom: vars.$height-footer;
+  }
+}

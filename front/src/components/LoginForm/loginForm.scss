@@ -1,0 +1,50 @@
+@use 'src/styles/vars';
+
+.login-form {
+
+  .login-form-element {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .login-form-message {
+    text-align: right;
+    margin: .3em 1em;
+  }
+  .login-form-logged {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .login-form-button {
+    font-weight: 700;
+    font-size: 1em;
+    color: #fff;
+    background-color: vars.$confirm-color;
+    border-radius: .3em;
+    border: 0;
+    padding: .7em;
+    height: 2.5em;
+    margin: vars.$gutter;
+
+    &:hover{
+      background-color: vars.$confirm-hover-color;
+    }
+  }
+  .errorMessage{
+    margin: vars.$gutter;
+    color: vars.$cancel-color;
+  }
+}
+
+@media (min-width: vars.$breakpoint-tablet) {
+  .login-form {
+
+    .login-form-element {
+      flex-wrap: nowrap;
+    }
+    .login-form-button {
+      margin-top: vars.$gutter * 2;
+    }
+  }
+}

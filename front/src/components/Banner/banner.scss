@@ -1,0 +1,68 @@
+@use 'src/styles/vars';
+
+.banner {
+  background: no-repeat url(src/assets/images/banner.jpg);
+  margin-top: 0px;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+
+  // Use of Flexbox to place the elements on the image (title, logo, searchbar)
+  .bannerTitle {
+    color: white;
+    height: calc(100vh - #{vars.$height-nav});
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+  }
+
+.flexedElement {
+  margin: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+  h2 {
+    opacity: 0.6;
+    font-size: 25px;
+  }
+
+  h1, p {
+    display: inline;
+  }
+
+  .header-logo {
+    width: 40px;
+    margin-left: 20px;
+  }
+
+  // Use of Rustico Font (cf downloaded file)
+  h1 {
+    padding-right: 10px;
+    font-size: 50px;
+    font-family: 'Rustico', sans-serif;
+  }
+}
+
+// Desktop version
+@media (min-width: vars.$breakpoint-mobile) {
+  h1 {
+    font-size: 60px;
+  }
+
+  .header-logo {
+    width: 55px;
+    margin-left: 20px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
+
+
+

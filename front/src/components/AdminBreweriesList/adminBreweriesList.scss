@@ -1,0 +1,110 @@
+@use 'src/styles/vars';
+
+.adminBreweriesList {
+  margin: 0;
+
+  &:nth-child(2n+1) {
+    background-color: #dfe6ed;
+  }
+
+  button {
+    padding: 0;
+    border: none;
+    background: none;
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto 8px;
+
+    .breweryNameRegion p {
+      margin: 8px auto 5px 10px;
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      width: 90px;
+
+      img {
+        width: 20px;
+        margin: auto 5px;
+      }
+
+      .eyes {
+        display: flex;
+        position: relative;
+        top: 1px;
+
+        &+.eyes_hover {
+          display: none;
+        }
+
+        //change icon when hover
+        &:hover {
+          display: none;
+
+          &+.eyes_hover {
+            display: flex;
+            position: relative;
+            top: 1px;
+          }
+        }
+      }
+
+      .edit {
+        display: flex;
+        position: relative;
+
+        &+.edit_hover {
+          display: none;
+        }
+
+        //change icon when hover
+        &:hover {
+          display: none;
+
+          &+.edit_hover {
+            display: flex;
+            position: relative;
+          }
+        }
+      }
+
+      .trash {
+        display: flex;
+        position: relative;
+
+        &+.trash_hover {
+          display: none;
+        }
+
+        //change icon when hover
+        &:hover {
+          display: none;
+
+          &+.trash_hover {
+            display: flex;
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+}
+
+// For screens larger than 480px
+@media (min-width: vars.$breakpoint-mobile) {
+  .adminBreweriesList {
+    li {
+      .breweryNameRegion p {
+        display: inline-block;
+        margin-right: 30px;
+        min-width: 350px;
+      }
+    }
+
+  }
+}

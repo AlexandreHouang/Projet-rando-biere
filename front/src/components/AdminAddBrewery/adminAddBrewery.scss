@@ -1,0 +1,31 @@
+@use 'src/styles/vars';
+
+.brewery-form {
+  width: auto;
+
+  .brewery-form-button {
+    font-weight: 700;
+    font-size: 1em;
+    color: #fff;
+    background-color: vars.$confirm-color;
+    border-radius: .3em;
+    border: 0;
+    padding: .7em;
+    height: 2.5em;
+    margin: vars.$gutter;
+
+    &:hover{
+      background-color: vars.$confirm-hover-color;
+    }
+  }
+  .errorMessage{
+    margin: vars.$gutter;
+    color: vars.$cancel-color;
+  }
+}
+
+@media (min-width: vars.$breakpoint-tablet) {
+  .brewery-form {
+    width: 60%;
+  }
+}

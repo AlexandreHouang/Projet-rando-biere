@@ -1,0 +1,32 @@
+@use 'src/styles/vars';
+
+.hikingDescription {
+
+  .hikingDescription__text {
+    margin: vars.$gutter;
+    line-height: vars.$line-height-medium;
+  }
+
+  .content__difficulty,
+  .content__distance,
+  .content__time {
+    display: flex;
+    align-items: center;
+    margin: vars.$gutter 0;
+
+    .icon {
+      width: vars.$width-icon;
+      margin-right: vars.$gutter / 2;
+      margin-left: vars.$gutter;
+    }
+  }
+}
+
+@media (min-width: vars.$breakpoint-tablet) {
+  .hikingDescription {
+
+    .hikingDescription__text {
+      max-width: 50vw;
+    }
+  }
+}

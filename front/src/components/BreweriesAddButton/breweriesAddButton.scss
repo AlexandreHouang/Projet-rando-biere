@@ -1,0 +1,19 @@
+.breweriesAddButton {
+  button {
+    background-color: #21ba45;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 10px;
+
+    &:hover {
+      background-color: #16ab39;
+    }
+  }
+}

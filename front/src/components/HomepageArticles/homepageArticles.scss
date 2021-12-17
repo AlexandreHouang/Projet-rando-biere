@@ -1,0 +1,60 @@
+@use 'src/styles/vars';
+
+.homepageArticles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    text-align: center;
+    margin: 20px auto -12px auto;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .breweryCards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .view-brasseries {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    margin: vars.$gutter;
+    padding-bottom: vars.$gutter;
+    color: vars.$primary-color;
+
+    .view-brasseries__link {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: vars.$mini-font;
+      border-bottom: 3px solid vars.$primary-color;
+      text-transform: uppercase;
+    }
+    .breweryCardYellowArrow {
+      width: vars.$width-icon;
+      margin-left: vars.$gutter / 2;
+    }
+  }
+}
+
+// For screens larger than 480px
+@media (min-width: vars.$breakpoint-mobile) {
+  .homepageArticles {
+    h1 {
+      margin: 20px auto 20px auto;
+      font-size: 40px;
+    }
+
+    .breweryCards {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+  }
+}

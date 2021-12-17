@@ -1,0 +1,19 @@
+@use 'src/styles/vars';
+
+.breweryDescription{
+  
+  .breweryDescription__text{
+    margin: vars.$gutter;
+    line-height: vars.$line-height-medium;
+  }
+  .breweryDescription__mail, .breweryDescription__phone{
+    display: flex;
+    align-items: center;
+    margin: vars.$gutter;
+
+    .icon{
+      width: vars.$width-icon;
+      margin-right: vars.$gutter / 2;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+### All the breweries
+
+GET http://localhost:3500/v1/breweries
+
+
+### All breweries with filter 
+
+GET http://localhost:3500/v1/breweries?region=Grand Est
+
+###
+GET http://localhost:3500/v1/breweries?region=Auvergne-Rhône-Alpes
+
+
+### All breweries with wrong filter
+GET http://localhost:3500/v1/breweries?region=Grand Ouest
+
+### 
+GET http://localhost:3500/v1/brewery/2
+
+###
+GET http://localhost:3500/v1/brewery/85
+
+
+###Insert a new valid brewery
+POST http://localhost:3500/v1/brewery
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuaWNrbmFtZSI6Im1pY2hlbCIsImVtYWlsIjoibWljaGVsQG1pY2hlbC5mciIsInBhc3N3b3JkIjoiJDJiJDEwJHVVanBUN0MxcTdsWmdITmpXc0V1THVQLy5oanlFOVdBT1lPd1AwS2ZrV203QURyNzlPbXZtIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTYyMjAxNTMzNCwiZXhwIjoxNjIyMTAxNzM0fQ.lJqskyVi_XAu7QY1xY1Q0sqq0LU-17y5BqJrdZK4OEY
+Content-Type: application/json
+
+{
+    "name": "dvkjgsjpgkdsĝl",
+    "main_img": "paradise-brew",
+    "description": "C'est le paradis !",
+    "region": "Normandie",
+    "slug": "hfghfghfghfg",
+    "adress": "150 rue de la vache, 50100 Cherbourg",
+    "email": "paradise-bre@brebre.ca",
+    "phone_number":"045569645", 
+    "user_id": 1
+}
+
+###Update a new valid brewery
+PATCH  http://localhost:3500/v1/brewery/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuaWNrbmFtZSI6Im1pY2hlbCIsImVtYWlsIjoibWljaGVsQG1pY2hlbC5mciIsInBhc3N3b3JkIjoiJDJiJDEwJHVVanBUN0MxcTdsWmdITmpXc0V1THVQLy5oanlFOVdBT1lPd1AwS2ZrV203QURyNzlPbXZtIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTYyMjAxNTMzNCwiZXhwIjoxNjIyMTAxNzM0fQ.lJqskyVi_XAu7QY1xY1Q0sqq0LU-17y5BqJrdZK4OEY
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name": "La brasserie du paradis",
+    "main_img": "paradise-brew",
+    "description": "C'est le paradis !",
+    "region": "Normandie",
+    "slug": "paradise-brew",
+    "adress": "190 rue de la vache, 50100 Cherbourg",
+    "email": "paradise-bre@brebre.ca",
+    "phone_number":"0245758432", 
+    "user_id": 1
+}
+
+###Delete an existing brewery
+DELETE http://localhost:3500/v1/brewery/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuaWNrbmFtZSI6Im1pY2hlbCIsImVtYWlsIjoibWljaGVsQG1pY2hlbC5mciIsInBhc3N3b3JkIjoiJDJiJDEwJHVVanBUN0MxcTdsWmdITmpXc0V1THVQLy5oanlFOVdBT1lPd1AwS2ZrV203QURyNzlPbXZtIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTYyMjAxNTMzNCwiZXhwIjoxNjIyMTAxNzM0fQ.lJqskyVi_XAu7QY1xY1Q0sqq0LU-17y5BqJrdZK4OEY
+
+
+###Try to delete a non-existing brewery
+DELETE http://localhost:3500/v1/brewery/7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuaWNrbmFtZSI6Im1pY2hlbCIsImVtYWlsIjoibWljaGVsQG1pY2hlbC5mciIsInBhc3N3b3JkIjoiJDJiJDEwJHVVanBUN0MxcTdsWmdITmpXc0V1THVQLy5oanlFOVdBT1lPd1AwS2ZrV203QURyNzlPbXZtIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTYyMjAxNTMzNCwiZXhwIjoxNjIyMTAxNzM0fQ.lJqskyVi_XAu7QY1xY1Q0sqq0LU-17y5BqJrdZK4OEY
+###
+POST http://localhost:3500/v1/login
+Content-Type: application/json
+
+{
+    "email": "michel@michel.fr",
+    "password": "michel_michel"
+}
+

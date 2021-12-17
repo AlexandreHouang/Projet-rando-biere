@@ -1,0 +1,22 @@
+@use 'src/styles/vars';
+
+.breweryHeader {
+  display: flex;
+  background: no-repeat url(src/assets/images/banner.jpg);
+  height: 30vh;
+  margin-bottom: 30px;
+  background-position: center 28%;
+  background-size: cover;
+
+  .flexedElement {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  // set z-index's value from 1 to 2 so that the item's list of the searchbar remains above the BreweryCard
+  .MuiList-root {
+    z-index: 2;
+  }
+}

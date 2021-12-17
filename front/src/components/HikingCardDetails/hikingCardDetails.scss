@@ -1,0 +1,24 @@
+@use 'src/styles/vars';
+
+.hikingCardDetails{
+  display: flex;
+  padding: vars.$gutter;
+  flex-wrap: wrap;
+
+  .hikingCardDetails__infos,
+  .hikingCardDetails__carousel{
+    width: 100%;
+  }
+}
+
+@media (min-width: vars.$breakpoint-tablet) {
+  .hikingCardDetails{
+
+    .hikingCardDetails__carousel{
+      width: 40%;
+    }
+    .hikingCardDetails__infos{
+      width: 60%;
+    }
+  }
+}

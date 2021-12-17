@@ -1,0 +1,88 @@
+@use 'src/styles/vars';
+
+.hikingCard{
+  position: relative;
+  width: calc(100% - 1rem);
+  margin: vars.$gutter;
+
+  .hikingCard__img{
+
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      width: 90%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px 15px;
+      transform: translateY(14px);
+      margin-left: 5%;
+    }
+  }
+  .hikingCard__border{
+    width: 100%;
+    background-color: vars.$shadow-color;
+    border-radius: 15px;
+    padding-bottom: 28px;
+    z-index: 1;
+    position: relative;
+
+    .hikingCard__content{
+      width: calc(100% - 28px);
+      height: calc(100% - 28px);
+      background-color: vars.$light-color;
+      transform: translate(14px, 14px);
+      border-radius: 15px;
+      padding: vars.$gutter;
+
+      .content__title{
+        font-weight: bold;
+        font-size: vars.$title3-font;
+        margin-bottom: vars.$gutter;
+      }
+      .content__description{
+        color: vars.$text-light-color;
+      }
+      .content__difficulty, .content__distance, .content__time{
+        display: flex;
+        align-items: center;
+        margin: vars.$gutter 0;
+
+        .icon{
+          width: vars.$width-icon-medium;
+          margin-right: vars.$gutter;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: vars.$breakpoint-tablet) {
+  .hikingCard{
+    width: calc(50% - 6rem);
+    margin: vars.$gutter * 3;
+
+    .hikingCard__img{
+      width: 50%;
+      position: absolute;
+      right: 0;
+      top: calc(1rem + 14px); // 14px from translate + 1rem of padding from the white card 
+      bottom: 0;
+
+      img{
+        border-radius: 0 15px 15px 0;
+        transform: none;
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+    .hikingCard__border{
+      width: 50%;
+      height: calc(100% + 28px);
+      padding-bottom: 0;
+
+      .hikingCard__content{
+        width: 100%;
+      }
+    }
+  } 
+}

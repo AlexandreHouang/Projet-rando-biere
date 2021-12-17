@@ -1,0 +1,54 @@
+@use 'src/styles/vars';
+
+//  Mobile Version
+.field {
+  margin: vars.$gutter vars.$gutter 0 vars.$gutter;
+  position: relative;
+  width: 100%;
+}
+.field-input {
+  width: 100%;
+  padding: .7em;
+  font-size: 1em;
+  border: none;
+  border-radius: .3em;
+  height: 2.5em;
+  background-color: vars.$shadow-color;
+}
+
+.field--has-content .field-label {
+  display: block;
+}
+
+.field--has-content .field-input {
+  padding: 1.4em .7em .4em;
+}
+
+.field-label {
+  display: none;
+  position: absolute;
+  top: .2rem;
+  left: .7rem;
+  font-weight: 700;
+  color: #999;
+  font-size: .7em;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  animation: labelSlideUpAndShow .3s;
+}
+@keyframes labelSlideUpAndShow{
+  0% {
+    transform: translateY(1em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0em);
+    opacity: 1;
+  }
+}
+
+@media (min-width: vars.$breakpoint-tablet) {
+  .field {
+    width: auto;
+  }
+}
