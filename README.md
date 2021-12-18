@@ -16,7 +16,7 @@
   - [Features](#features)
   - [Setup](#setup)
     - [Back](#back-1)
-      - [Lauch the API](#lauch-the-api)
+      - [Launch the API](#launch-the-api)
     - [Front](#front-1)
   - [Usage](#usage)
     - [API](#api)
@@ -87,7 +87,7 @@ These are all dependencies that will be installed for this project :
 - redis
 
   
-#### Lauch the API
+#### Launch the API
 
 First, make sure to **create a database** in PostgreSQL with name `rando_biere`.
 
