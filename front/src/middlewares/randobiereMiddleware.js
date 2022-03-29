@@ -12,8 +12,9 @@ import {
   deleteRedirectSearchbar,
 } from 'src/actions/randobiere';
 
+const urlApi = 'http://ec2-54-225-0-75.compute-1.amazonaws.com:3500/v1';
 //const urlApi = 'http://ec2-3-85-243-18.compute-1.amazonaws.com:3500/v1';
-const urlApi = 'http://localhost:5555/v1';
+//const urlApi = 'http://localhost:5555/v1';
 
 const randobiereMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
