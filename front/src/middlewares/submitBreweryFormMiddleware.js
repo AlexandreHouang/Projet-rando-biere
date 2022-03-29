@@ -12,7 +12,7 @@ import {
 } from 'src/actions/AdminAddBrewery';
 
 // Adress to indicate when we want to hit on the AWS Server
-const SERVER_URL = 'http://ec2-54-225-0-75.compute-1.amazonaws.com:3500/v1';
+const SERVER_URL = 'https://ec2-54-225-0-75.compute-1.amazonaws.com:3500/v1';
 //const SERVER_URL = 'http://ec2-3-85-243-18.compute-1.amazonaws.com:3500/v1';
 //const SERVER_URL = 'http://localhost:5555/v1';
 
