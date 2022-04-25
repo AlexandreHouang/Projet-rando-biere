@@ -12,7 +12,7 @@ import {
 } from 'src/actions/AdminAddBrewery';
 
 // Adress to indicate when we want to hit on the AWS Server
-const SERVER_URL = 'ec2-54-164-167-52.compute-1.amazonaws.com:3500/v1';
+const SERVER_URL = 'ec2-54-225-49-124.compute-1.amazonaws.com:3500/v1';
 //const SERVER_URL = 'http://localhost:5555/v1';
 
 const submitBreweryFormMiddleware = (store) => (next) => (action) => {
