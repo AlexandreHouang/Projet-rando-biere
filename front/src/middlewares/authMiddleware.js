@@ -7,7 +7,7 @@ import {
   deleteErrorMessage,
 } from 'src/actions/auth';
 
-const SERVER_URL = 'http://ec2-3-85-243-18.compute-1.amazonaws.com:3500/v1';
+const SERVER_URL = 'http://ec2-52-91-79-84.compute-1.amazonaws.com:3500/v1';
 // const SERVER_URL = 'http://localhost:5555/v1';
 
 const authMiddleware = (store) => (next) => (action) => {
